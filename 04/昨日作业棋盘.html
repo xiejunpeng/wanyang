@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<!--	
+有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻，重量是0.00001kg，
+第二个里面放2粒，第三个里面放4粒，第四个里面放8粒，第五个里面放16粒，
+问棋盘上放的所有芝麻的重量是多少？-->
+
+<script>
+// 1 2 4 8 16 32 64 128.... 
+var sum = 0;
+for( var i=0; i<64; i++ ){
+	var num = Math.pow(2, i);
+	sum += num;
+	//document.write( (i+1)+"格子中有："+ num +"粒<br>");
+}
+document.write(sum*0.00001)
+
+</script>
+	
+</body>
+</html>

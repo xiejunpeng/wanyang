@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<!--
+开发一款软件，根据公式(身高-108)*2=体重，可以有10斤左右的浮动。 
+来观察测试者体重是否合适。	
+-->	
+真实身高：<input type="text" id="input1" />厘米<br>
+真实体重：<input type="text" id="input2" />斤<br>
+<input type="button" id="btn" value="计算" />
+</body>
+</html>
+<script>
+btn.onclick = function(){
+	// 获取真实身高
+	var height = input1.value;
+	// 获取真实体重
+	var weight = input2.value;
+	// 求得理论体重
+	var tmp = (height-108)*2;
+	// 判断真实体重与理论体重的差值，是不是在10以内
+	var dist = weight - tmp;
+	console.log("理论体重：",tmp," 差值：",dist);
+	if( dist>-10 && dist<10 ){
+		alert("标准");
+	}else{
+		//alert("身材很糟糕");
+		if( weight>tmp ){
+			// 如果真实体重，大于理论体重，那么表示偏胖
+			alert("偏胖");
+		}else{
+			alert("偏瘦");
+		}		
+	}
+}
+</script>

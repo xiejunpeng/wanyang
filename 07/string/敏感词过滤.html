@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+#div1{
+	width: 400px;
+	height: 130px;
+	border: 1px solid gray;
+	overflow: auto;
+}	
+</style>
+</head>
+<body>
+<div id="div1"></div>
+<input type="text" id="input1" autocomplete="off" />
+<input type="button" id="btn" value="提交" />
+<script>
+// 敏感词
+var arr = ["杀人", "放火", "走私", "贩毒"];
+	
+btn.onclick = function(){
+	var str = input1.value;
+	// 替换
+	//str = str.replace("杀人", "*");
+	for(var i=0,len=arr.length; i<len; i++){
+		str = replaceAll(str, arr[i], "艹");
+	}
+	
+	div1.innerHTML += str+"<br>";
+	input1.value = "";
+}
+
+// 替换函数
+function replaceAll(str, str1, str2){
+	while( str.indexOf(str1)>-1 ){
+		str = str.replace(str1, str2);
+	}
+	return str;
+}
+
+
+</script>
+</body>
+</html>

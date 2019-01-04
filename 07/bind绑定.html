@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+
+var a = 1;
+
+var obj = {a:2};
+
+function fn(){
+	console.log(this.a);
+}
+
+// fn();
+
+//var f = fn.bind(obj);
+//f();
+// bind的作用是，把前面的函数，生成一个副本，副本中的this指向bind的参数obj
+
+
+
+// bind  和  call  的区别？
+
+fn.call(obj);
+// fn.bind(obj)();
+// call 和 bind 的相同点是，都能够让fn函数中的this，指向obj
+// 不同点是：call直接表示执行，而bind仅仅表示函数中的this指向obj，如果想要执行，必须后面加括号
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>	
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}	
+#div1{
+	position:relative;
+}	
+#div1>*{
+	position: absolute;
+	left: 0px;
+}
+#ul1{
+	top: 0px;
+	width: 200px;
+	height: 30px;
+	border: 1px solid gray;
+}
+#ol1{
+	top:30px;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	display: none;
+}
+#ol1>li{
+	list-style: none;
+	height: 29px;
+	border-bottom: 1px solid gray;
+	width: 200px;
+	background: yellowgreen;
+	line-height: 29px;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+}
+</style>
+</head>
+<body>
+
+<div id="div1">
+	<ul id="ul1"></ul>
+	<ol id="ol1">
+		<li>AAA</li>
+		<li>BBB</li>
+		<li>CCC</li>
+		<li>DDD</li>
+	</ol>
+</div>
+
+<script>
+ul1.onclick = function(e){
+	ol1.style.display = "block";
+	console.log("显示菜单");
+	e.stopPropagation();
+}
+
+var lis = ol1.children;
+var len = lis.length;
+for( var i=0; i<len; i++ ){
+	lis[i].onclick = function(){
+		// 将点击的这个li的内容，放入ul1中
+		ul1.innerHTML = this.innerHTML;
+		
+	}
+}
+
+document.onclick = function(){
+	// 将下啦菜单隐藏
+	ol1.style.display = "none";
+	console.log("隐藏菜单");
+}
+
+
+</script>
+	
+</body>
+</html>

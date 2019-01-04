@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+//charAt() 方法可返回指定位置的字符。				stringObject.charAt(index)
+
+//console.log( "abcd".charAt(2) );
+//console.log( "abcd"[2] );
+
+
+//indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。	stringObject.indexOf(searchvalue, fromindex)  如果没找到返回-1
+
+//console.log( "abcd".indexOf("bd") );
+//console.log( "abcda".lastIndexOf("a") );
+
+
+
+//substring() 方法用于提取字符串中介于两个指定下标之间的字符。		stringObject.substring(start, stop)		不支持负数写法
+
+// console.log( "abcde".substring(2) );
+// console.log( "abcde".substring(1, 3) );		// 下标 >=1 and 下标<3   从哪个开始数到到哪结束但不包含最后一个(跟数组中的spliceg的方法一样.)
+// console.log( "abcde".substring(-2) );
+
+//console.log( "abcde".substr(2) );
+//console.log( "abcde".substr(1, 3) );		// 下标从1开始，取3个字符
+//console.log( "abcde".substr(-2) );
+
+
+//slice() 方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。	stringObject.slice(start, end)		支持负数的写法(数组也有这个方法)
+
+//console.log( "abcde".slice(2) );
+//console.log( "abcde".slice(1, 3) );		// 下标 >=1 and 下标<3
+//console.log( "abcde".slice(-2) );			// 倒数2个
+//console.log( "abcde".slice(-4, -2) );		// 倒数第4个开始，到倒数第2个结束
+
+
+
+
+//split() 方法用于把一个字符串分割成字符串数组。			stringObject.split(separator)
+
+//var arr = "ab1cde1fg".split("1");
+//console.log(arr);
+
+
+// var str = "abcdefg";
+//str.split("")  // ["a", "b", .....]
+// console.log(str.split("").reverse().join(""))
+
+
+
+
+
+//replace() 方法用于在字符串中用一些字符替换另一些字符			stringObject.replace(regexp/substr, replacement)	
+// 从左到右只能替换一次,所以再写一次replac(),或者用whiler的办法
+//var str = "abcb";
+//var r = str.replace("b", "1");
+//console.log(r);
+
+
+// var str = "aaaaaaaaaaaaaa";
+/*
+	//indexOf("a")>-1 表示indexOf("a")存在a,-1表示不存在的意思
+while( str.indexOf("a")>-1 ){
+	str = str.replace("a", 1);
+}
+
+console.log(str);
+*/
+
+// 正则表达式
+// var r = str.replace(/a/g, 1);		// g 表示全局
+// console.log(r);
+
+var str = "aaaaaaaaaaaaaa";    //字符串也有lenght属性
+console.log(str.length);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>	
+	
+</body>
+</html>

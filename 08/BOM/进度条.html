@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+#div1{
+	width: 500px;
+	height: 30px;
+	border: 1px solid gray;
+	position: relative;
+}	
+#div2{
+	position: absolute;
+	width: 0px;
+	height: 30px;
+	background: green;
+}
+</style>
+</head>
+<body>
+	<div id="div1">
+		<div id="div2"></div>
+	</div>
+	<input type="button" value="开始" id="btn1" />
+	<input type="button" value="暂停" id="btn2" />
+	<span id="span1"></span>
+	<script>
+	var i=0, timer;
+	function move(){
+		i++;
+		div2.style.width = i+"px";
+		span1.innerHTML = (i/500*100).toFixed(1)+"%";
+		if( i==500 ){
+			clearInterval(timer);
+		}
+	}
+	btn1.onclick = function(){
+		clearInterval(timer);//保证页面上只有1个定时器，这样定时器就不会出现多个，timer就不会覆盖
+		timer = setInterval(move, 30);
+	}
+	btn2.onclick = function(){
+		clearInterval(timer);
+	}
+	
+	
+	
+	</script>
+</body>
+</html>

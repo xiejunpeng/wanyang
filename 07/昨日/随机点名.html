@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<span id="span1"></span>
+<script>
+	
+var arr = ['师绍卿', '袁迪', '陈泽微', '朱冬妹', '邓梓劲', '车结芳', '梁莅英', '张崇财', '余小超', '谭韦佳', '唐红梅', '谢均鹏', '覃现中', '吴秋萍', '韦凤迎', '潘秉鑫', '龙西', '庄菲菲', '潘田规', '黄桂金', '范燕敏', '谭佩佼', '卢瑜', '刘洁清', '陆靖宁', '祝宝妹', '任荣嫒', '覃琳蓉', '何舜彬', '李世珍', '黄剑柔', '覃建婷', '梁霞', '韦佳巧', '张永健', '卜俊', '吴彦青', '李远钏', '黄承祥', '黄荣伟', '韦华德', '陈鸿', '廖偲', '廖丹阳', '洪俊生', '夏旺旺', '肖童', '吴尚鑫', '吕钰鑫', '杨椀萍', '贺洪鑫', '陈燕伟', '李盛霖', '李彦慈', '罗凤丽', '黄小玲'];
+var len = arr.length; //3   	第一步获取 数组长度
+
+//var ind = parseInt(Math.random() * len);    第二步Math.random()数学随机数    用paseInt()整数包起来
+//console.log(arr[ind])
+
+//span1.innerHTML = arr[0];   
+
+// 定时器			第三步定时器有两个参数,第一个是function,第二个是ms.
+// 参数： 函数，毫秒
+// 每隔多少时间，执行一次前面的函数
+var timer = setInterval(function(){
+	var ind = parseInt(Math.random() * len);
+	span1.innerHTML = arr[ind];
+}, 10);
+
+// 当点击页面时，停止定时器			第四步停止
+document.onclick = function(){
+	clearInterval(timer);
+}
+
+
+</script>	
+</body>
+</html>

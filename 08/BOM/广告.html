@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}	
+#div1{
+	background: yellowgreen;
+	position: absolute;
+	width: 550px;
+	height: 350px;
+	display: none;
+}	
+</style>
+</head>
+<body>
+	
+	<div id="div1">
+		这是广告
+		<span id="span1">3</span> 秒后自动关闭
+	</div>
+	
+	<script>
+	var timer;
+	document.onclick = function(){
+		div1.style.display = "block";
+		span1.innerHTML = 3;
+		clearInterval(timer);
+		timer = setInterval(function(){
+			span1.innerHTML--;
+			if( span1.innerHTML == -1 ){
+				clearInterval(timer);
+				div1.style.display = "none";
+			}
+		}, 1000);
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<span id="span1"></span>	
+<input type="button" value="按钮" id="btn" />	
+
+<script>
+span1.innerHTML = new Date().toLocaleString();
+
+btn.onclick = function(){
+	location.href = "http://www.baidu.com";
+	//alert( location.href );
+	
+	//location.reload()
+}
+</script>
+
+</body>
+</html>

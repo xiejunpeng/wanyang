@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="input1">
+        <select name="" id="select1">
+            <option> + </option>
+            <option> - </option>
+            <option> / </option>
+            <option> % </option>
+        </select>
+        <input type="text" id="input2">
+        <input type="button" id="btn"  value="=">
+        <div id="div1"></div>
+    </form>
+</body>
+    <script>
+        // btn.onclick=function(){
+        //     div1.innerHTML=eval(Number(input1.value) + select1.value +  Number(input2.value));
+        // }
+        btn.onclick=function(){
+        var div1=document.getElementById("div1");
+            div1.innerHTML=eval(Number(input1.value) + select1.value +  Number(input2.value));
+        }
+    </script>
+</html>

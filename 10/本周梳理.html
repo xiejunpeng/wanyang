@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+// 数组
+// 定义   new Array(1,2,3)       [1,2,3]
+// 使用	  length      
+// 方法：push()	pop()	unshift()   shift()   slice()    splice()    join()
+//     concat()    sort()
+// 排序  冒泡排序、选择排序
+// 循环  for( i in obj ){}
+// 判断是否为数组  isArray()
+
+
+// 对象
+// 定义   new Object()		{}
+// 对象和数据的区别：   length     typeof()
+// 循环  for( i in obj ){}
+// js对象 > json对象，   json不支持function、undefined、NaN
+
+
+// 堆栈结构  值传递和引用传递   深浅拷贝  潜拷贝slice	深拷贝JSON.parse(JSON.stringify())
+
+
+// es5
+// 严格模式：变量必须声明，在块内声明的变量只能在块内使用，多了一个eval作用域
+
+// bind：函数绑定，   function fn(a,b,c){this}       fn.bind(obj)(1,2,3)
+// bind 与 call 的区别
+
+// es5数组的新增方法：indexOf() lastIndexOf()  forEach   map   reduce   some   every
+
+
+// 字符串     new String("字符串")
+// 方法：charAt   substring(a,b)  substr(a,b)  slice(a,b)
+// split()      replace(a,b)    trim()   toLowerCase    toUpperCase()
+
+// 字符集编码		ascii 前128是标准  后128是扩展		gbk      iso->unicode
+// 获取某个字符的unicode码	     "a".charCodeAt(0)
+// 根据某个unicode码获取字符		 String.fromCharCode()
+
+// utf-8            0000 0001     0000 0000 0000 0001
+
+
+// 数学对象 Math
+// random()     pow(x,y)    sqrt()    abs     min     max   ceil   floor   round
+// sin   cos   tan    弧度和角度的转换       pi
+
+
+// 日期  new Date()
+// 参数：  new Date("2018/1/32 10:1:1")        new Date(2018, 0, 32, 10, 1, 1)
+// getFullYear()   setFullYear()    Month    Date    Hours   Minutes  Seconds
+// dt.getTime()	 的返回值是   dt这个时间与1970-1-1 这个时间的毫秒间隔   
+// Date.parse("2018-1-1")   的返回值是   "2018-1-1"这个时间与1970-1-1 这个时间的毫秒间隔   
+// dt.toLocaleString()   toUTCString()    toGMTString()   toISOString()
+// 星期   getDay()     0-6
+
+
+// BOM 浏览器对象模型：浏览器中的功能，例如：前进、后退、刷新、对话框、定时器、打开关闭窗口
+
+// window 核心对象，最顶层对象
+// window下面有哪些对象：document,  screen, navigator, location....
+// window下面有哪些方法：open     close     alert   prompt   confirm .....
+// window下面有哪些属性：所有的全局变量都是属性
+// window下面有哪些事件：onload    onresize   onscroll....
+
+// 跳转： location.href='http://www.baidu.com'
+// 前进，后退，刷新：	 history.go(0)
+// 浏览器相关信息：navigator.userAgent		navigator.appName
+
+// 滚动条   scroll
+// document.documentElement.scrollTop   指y轴滚动条隐藏起来的那一部分高度
+// document.documentElement.scrollHeight   指y轴滚动条总高度
+// document.documentElement.clientHeight   指窗口可视区域高度
+
+// 定时器：	setInterval       setTimeout
+// 相同点：都叫做定时器，都是异步操作，第一个参数是函数，第二个参数是毫秒
+// 不同点：setInterval无限次执行	setTimeout仅执行一次
+// 清除定时器：clearInterval()     clearTimeout()  
+// 异步：上一个任务没有执行结束，下一个任务就可以开始执行
+// 同步：上一个任务执行结束后，下一个任务才允许去执行
+
+
+// DOM 文档对象模型
+// 节点  nodeType    nodeValue    nodeName
+// 元素节点、属性节点、文本节点
+// 获取子节点：	children只获取元素节点       childNodes包含文本节点
+// firstChild		firstElementChild
+// lastChild    prev...			nextChild      parentNode
+
+
+// 增
+	// 创建元素节点
+	//var li=document.createElement("li");
+	//document.body.appendChild(li)
+	// 创建文本节点
+	//var txt = document.createTextNode("文本内容");
+	//document.body.appendChild(txt)	
+	//insertBefore(a, b)  把a插入到b的前面
+
+// 删
+	//a.parentNode.removeChild(a)	必须在父节点下删除子节点
+
+// 改
+	// 只能先删除，后添加
+	//div1.outerHTML = "<a>123</a>"
+	//div1.outerText = "<a>123</a>"
+	//div1.innerHTML = ""
+	//div1.innerText = ""
+	// css修改
+	//div1.style.color = "red";
+	//div1.style.cssText = "color:red;gackground:blue"
+	//div1.className = "a";			div1.setAttribute("class", "a")
+	//div1.classList.add("a");       remove("a")
+
+// 查
+	//getElementById("div1")				querySelector("#div1")	   div1		eval("div1")
+	//getElementsByName("a")				querySelectorAll("[name=a]")
+	//getElementsByClassName("b")			querySelectorAll(".b")
+	//getElementsByTagName("div")			querySelectorAll("div")
+
+// 属性
+	//div1.a = 1        					console.log(div1.a);
+	//div1.setAttribute("b", 2)			console.log(div1.getAttribute("b"))	
+	//div1.dataset.c = 1					console.log(div1.dataset.c)
+	//div1.attributes.d
+
+// 虚拟节点
+	//var tmp = document.createDocumentFragment();
+
+// 偏移量
+	// 参照物：div1.offsetParent     要看元素postion的定位
+	// div1与其参照物之间的横轴间距		div1.offsetLeft
+	// offsetTop		offsetWidth		offsetHeight
+
+</script>	
+</body>
+</html>

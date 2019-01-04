@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<input type="text" id="input1" />	
+<input type="text" id="input2" />
+<input type="button" id="btn1" value="+" />
+<input type="button" id="btn2" value="-" />
+<input type="button" id="btn3" value="*" />
+<input type="button" id="btn4" value="/" />
+<input type="button" id="btn5" value="%" />
+<div id="div1"></div>
+</body>
+</html>
+<script>
+btn1.onclick = function(){
+	div1.innerHTML = input1.value*1 + input2.value*1;
+}
+btn2.onclick = function(){
+	div1.innerHTML = input1.value*1 - input2.value*1;
+}
+btn3.onclick = function(){
+	div1.innerHTML = input1.value*1 * input2.value*1;
+}
+btn4.onclick = function(){
+	div1.innerHTML = input1.value*1 / input2.value*1;
+}
+btn5.onclick = function(){
+	div1.innerHTML = input1.value*1 % input2.value*1;
+}
+</script>

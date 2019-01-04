@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+// 编码
+//var str = encodeURI("中")
+//console.log(str);
+// 解码
+//console.log(decodeURI("%E4%B8%AD"));		// utf8
+
+
+
+// 编码
+//console.log(encodeURIComponent("中"));
+// 解码
+//console.log(decodeURIComponent("%E4%B8%AD"));
+
+
+
+
+console.log( escape("中") );  
+// %u4E2D  ->    4E2D  是16进制，可以直接在控制台上输入  0x4E2D   ->  String.fromCharCode(20013)
+console.log( unescape("%u4E2D") );
+</script>
+</body>
+</html>

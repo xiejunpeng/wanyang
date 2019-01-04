@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+</head>
+<body>
+<!--
+执行顺序：
+	由上到下一行一行执行
+-->
+
+<!--浏览器打开后，仅仅把alert关联到按钮上
+<input type="button" onclick="alert(0)" />--><!--必须点击按钮时，alert才会被执行-->
+
+
+<input type="button" id="ab" value="点我" />
+<script>
+	// 浏览器一打开的时候，里面的代码直接执行了
+	// alert(1)
+	//alert(2)
+	//alert(3)
+	
+	ab.onclick = function(){
+		ab.value = "你好";
+	}
+</script>
+
+
+
+</body>
+</html>

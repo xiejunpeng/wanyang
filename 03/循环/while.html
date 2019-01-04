@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+	
+/*var i = 0;	
+while( i<5 ){
+	document.write(i+"<br>");
+	i++;	//更新。   ++ 的步长指1
+}*/
+
+
+
+/*var i = 10;
+while( i>0 ){
+	document.write(i+"<br>");
+	i = i-3;			// 步长 3
+}*/
+
+
+
+/*var i = 5;
+// 先执行i+1，然后用+1后的i与10做大小的比较，无论条件是否成立，+1都会执行。
+while( ++i < 10 ){		// 6<10		7<10		8<10		9<10	  10<10
+	document.write(i+"<br>");  // 6	7	8	9
+}
+document.write("i="+i);	//10
+*/
+
+
+/*var i=0;
+// 先执行i与3的大小比较，然后执行i+1，无论条件是否成立，+1都会执行。
+while( i++ < 3 ){			// 0<3		1<3		2<3		3<3
+	document.write(i+"<br>");	// 1		2		3
+}
+document.write("i="+i);	// 4
+*/
+
+
+/*
+// break 跳出
+var i=0;
+while( i < 3 ){
+	document.write(i+"<br>");
+	i++;
+	if( i==2 ){
+		break;	// break 跳出循环
+	}
+}			
+*/
+
+
+// 入职薪水 10K，每年涨幅 5% ，50 年后工资是多少？
+
+var m = 10000;
+var y = 1;
+while(y<=50){
+	m = m + m * 0.05;
+	document.write(y+"年后的薪水为："+m.toFixed(1)+"元<br>");
+	y++;
+}
+
+
+
+</script>	
+</body>
+</html>

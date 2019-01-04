@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<input type="text" id="input1" />
+<select id="select1">
+	<option>+</option>
+	<option>-</option>
+	<option>*</option>
+	<option>/</option>
+</select>
+<input type="text" id="input2" />	
+=
+<span id="span1"></span>
+</body>
+</html>
+<script>
+select1.onchange = function(){
+	span1.innerHTML = eval(input1.value+select1.value+input2.value);
+}
+	
+	
+
+
+
+var k=0; 
+console.log( k++ + ++k + k + ++k + k++);
+
+/*				a	k	
+ * a = k++		0	1
+ * a = ++k		2	2
+ * a = k			2	2
+ * a = ++k		3	3
+ * a = k++		3	4
+ */
+
+
+
+
+</script>

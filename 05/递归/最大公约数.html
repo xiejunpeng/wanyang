@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+// 循环
+/*
+function gcd(m, n){
+	var r;
+	do{
+		r = m % n;
+		m = n;
+		n = r;
+	}while(r!=0)
+	return m;
+}
+
+alert( gcd(12, 16) );
+*/
+// 递归
+/*
+function gcd(m, n){
+	var r;
+	r = m % n;
+	m = n;
+	n = r;
+	if(r!=0){
+		return gcd(m, n);
+	}else{
+		return m;
+	}
+}
+*/
+
+// 简写
+/*
+function gcd(m, n){
+	if(n!=0){
+		return gcd(n, m % n);
+	}else{
+		return m;
+	}
+}
+*/
+
+// 三目运算符
+// 条件 ? 值1 : 值2
+//false ? alert(1) : alert(2)
+//var r = false ? 1 : 2;
+//alert(r);
+
+
+
+// 简写
+/**/
+function gcd(m, n){
+	return (n!=0) ? gcd(n, m % n) : m
+}
+
+//alert( gcd(8, 16) );
+// 最小公倍数
+function lcm(m, n){
+	return m*n/gcd(m,n);
+}
+
+alert( lcm(12, 16) );
+
+</script>	
+</body>
+</html>

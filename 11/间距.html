@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+body{
+	height: 4000px;
+}	
+#div1{
+	position: fixed;
+	top: 10px;
+	width: 300px;
+	height: 300px;
+	background: yellow;
+}	
+</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+		div1.onclick = function(e){
+			div1.innerHTML = `
+				鼠标相对于可视区域：${e.clientX} , ${e.clientY} <br>
+				鼠标相对于页面：${e.pageX} , ${e.pageY} <br>				
+				鼠标相对于屏幕：${e.screenX} , ${e.screenY} <br>
+				鼠标相对于自身元素：${e.offsetX} , ${e.offsetY} <br>
+				
+			`;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+body{
+	background: #808080;
+}	
+li{
+	float: left;
+	width: 50px;
+	height: 300px;
+	background: white;
+	list-style: none;
+}	
+li:nth-child(odd){
+	background: black;
+	color: white;
+}
+audio{
+	display: none;
+}
+</style>
+</head>
+<body>
+	
+	<audio id="audio1" src="music/49.mp3" controls></audio>
+	
+	<ul id="ul1">
+		<li id="li49">1</li>
+		<li id="li50">2</li>
+		<li id="li51">3</li>
+		<li id="li52">4</li>
+		<li id="li53">5</li>
+		<li id="li54">6</li>
+		<li id="li55">7</li>
+	</ul>
+	
+	<script>
+	
+	document.onkeydown = function(e){
+		// e.keyCode 指按下的是哪个键子的unicode值
+		var code = e.keyCode;
+		document.title = code;
+		
+		audio1.src = "music/"+code+".mp3";
+		audio1.play();
+		
+		var elem = document.getElementById("li"+code);
+		elem.style.background = "#808080";
+		setTimeout(function(){
+			elem.style.background = "";
+		}, 300);
+	}
+	
+	
+	</script>
+	
+</body>
+</html>

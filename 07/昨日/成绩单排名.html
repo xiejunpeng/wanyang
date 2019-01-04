@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+td{
+	font-size: 12px;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	padding:5px;
+}	
+table{
+	border-left: 1px solid gray;
+	border-top: 1px solid gray;
+}	
+thead{
+	background: yellowgreen;
+}	
+tbody{
+	
+}
+</style>
+</head>
+<body>
+<script>
+// 基础数据
+var  json  =  {
+	"list":[
+		{"name":"张三疯",  "yuwen":80,  "shuxue":60,  "yingyu":50},
+		{"name":"李菜刀",  "yuwen":50,  "shuxue":55,  "yingyu":30},
+		{"name":"王羲之",  "yuwen":110,  "shuxue":80,  "yingyu":40},
+		{"name":"凤姐",  "yuwen":66,  "shuxue":70,  "yingyu":60},	
+		{"name":"贝克汉姆",  "yuwen":35,  "shuxue":75,  "yingyu":100},
+		{"name":"川普",  "yuwen":46,  "shuxue":64,  "yingyu":110},
+		{"name":"学霸君",  "yuwen":120,  "shuxue":120,  "yingyu":120}
+	]
+}
+// 求总成绩和平均成绩
+var arr = json.list;
+var i = 0;
+var len = arr.length;
+for(; i<len; i++){
+	var obj = arr[i];
+	obj.zong = obj.yuwen + obj.shuxue + obj.yingyu;
+	obj.pj = (obj.zong/3).toFixed(3)*1;
+}
+
+// 把数据显示在页面上
+function show(){
+	document.write("<table cellpadding='0' cellspacing='0' border='0'>");
+	document.write("<thead>");
+	document.write("<tr>");
+	document.write("<td>名称</td>");
+	document.write("<td>语文</td>");
+	document.write("<td>数学</td>");
+	document.write("<td>英语</td>");
+	document.write("<td>总</td>");
+	document.write("<td>平均</td>");
+	document.write("</tr>");
+	document.write("</thead>");
+	document.write("<tbody>");
+	for(var i=0; i<len; i++){
+		var obj = arr[i];
+		document.write("<tr>");
+		document.write("<td>"+obj.name+"</td>");
+		document.write("<td>"+obj.yuwen+"</td>");
+		document.write("<td>"+obj.shuxue+"</td>");
+		document.write("<td>"+obj.yingyu+"</td>");
+		document.write("<td>"+obj.zong+"</td>");
+		document.write("<td>"+obj.pj+"</td>");
+		document.write("</tr>");
+	}
+	document.write("</tbody>");
+	document.write("</table>");
+}
+
+
+
+//求每人的总成绩，排名名单。
+arr.sort(function(x, y){
+	return x.zong < y.zong;
+})
+show();
+//求平均成绩，排名名单。
+arr.sort(function(x, y){
+	return x.pj < y.pj;
+})
+show();
+
+//求单科成绩，排名名单。
+arr.sort(function(x, y){
+	return x.yuwen < y.yuwen;
+})
+show();
+
+
+
+
+
+
+
+</script>	
+</body>
+</html>

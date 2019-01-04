@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}	
+body{
+	width: 4000px;
+	height: 4000px;
+}
+#div1{
+	position: fixed;
+	left: 10px;
+	top: 10px;
+}
+</style>
+</head>
+<body>
+
+<div id="div1">
+	<div id="div2"></div>
+	<input type="button" value="滚动条定位" id="btn" />
+</div>
+
+<script>
+btn.onclick = function(){
+	//document.documentElement.scrollTop = 100;
+	//document.documentElement.scrollLeft = 200;
+	window.scrollTo( 200, 300 );
+}
+	
+	
+window.onscroll = window.onresize = function(){
+	var st = document.documentElement.scrollTop;
+	var ch = document.documentElement.clientHeight;
+	var sh = document.documentElement.scrollHeight;
+	
+	
+	var sl = document.documentElement.scrollLeft;
+	var cw = document.documentElement.clientWidth;
+	var sw = document.documentElement.scrollWidth;
+	
+	div2.innerHTML = `
+		scrollTop : ${st}<br>
+		clientHeight : ${ch}<br>
+		scrollHeight : ${sh}<br>
+		
+		<br>
+		scrollLeft : ${sl}<br>
+		clientWidth : ${cw}<br>
+		scrollWidth : ${sw}<br>
+	`;
+}
+</script>
+
+</body>
+</html>

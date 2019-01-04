@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<input type="button" id="btn" value="创建div" />	
+</body>
+</html>
+<script>
+btn.onclick = function(){
+	var div = document.createElement("div");
+	// 把div放到哪里？
+	document.body.appendChild(div);
+	div.innerHTML = "这是创建出来的div";
+	div.onclick = function(){ div.innerHTML="更改了" }
+}
+</script>

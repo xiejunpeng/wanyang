@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<input type="text" id="input1" autocomplete="off" />
+	<div id="div1"></div>
+</body>
+</html>
+<script>
+// 按下时	
+input1.onkeypress = function(){
+	div1.innerHTML += "onkeypress:"+this.value+"<br>";
+}
+	
+// 键盘上的键子，被按下的时候	
+input1.onkeydown = function(){
+	div1.innerHTML += "onkeydown:"+this.value+"<br>";
+}
+
+// 抬起时
+input1.onkeyup = function(){
+	div1.innerHTML += "onkeyup:"+this.value+"<br>";
+}
+</script>

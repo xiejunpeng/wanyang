@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+*{
+	margin: 0;
+}	
+body{
+	padding: 35px 10px;
+}
+#div1{
+	width: 100px;
+	height: 100px;
+	background: yellow;
+	padding: 15px 10px;
+	position: absolute;
+	left: 150px;
+	top: 120px;
+}	
+#div2{
+	width: 100px;
+	height: 100px;
+	background: greenyellow;
+	position: absolute;
+	left: 50px;
+	top: 20px;
+}
+</style>
+</head>
+<body>
+	<div id="div1">
+		<div id="div2"></div>
+	</div>
+	<script>
+		//如果自身含定位，而父及以上有定位，参照物为最近的定位的元素；
+		// div2 与 div2的参照物 的间距
+		console.log("div2的参照物：", div2.offsetParent)		
+		console.log("div2与其参照物的x轴间距：",div2.offsetLeft);
+		console.log("div2与其参照物的y轴间距：",div2.offsetTop);
+	</script>
+</body>
+</html>

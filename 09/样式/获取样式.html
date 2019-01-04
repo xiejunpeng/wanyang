@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+#div1{ background-color: yellow; }	
+#div1:after{
+	content: "内容";
+	color: blue;
+	font-size: 20px;
+}
+</style>
+</head>
+<body>
+	<!--行间样式（内联样式）-->
+	<div id="div1" style="color:red; font-size:16px">123456</div>
+	
+	<script>
+	// 获取行间样式( 这种写法只能够获取行间样式，不能获取非行间样式 )
+	//console.log(div1.style.color);   
+	//console.log(div1.style.fontSize);
+	//console.log(div1.style['font-size']);
+	
+	//console.log(div1.style.backgroundColor);  // 找不到内部样式和外部样式
+	
+	// 即能够获取行间样式，也能够获取非行间样式
+	//console.log(getComputedStyle(div1).backgroundColor);
+	//var obj = getComputedStyle(div1);
+	//console.log( obj.backgroundColor );
+	//console.log( obj.color );
+	
+	// 获取伪类中的样式
+	//console.log(getComputedStyle(div1, ':after').color);
+	
+	
+	
+	// IE
+	//div1.currentStyle['color'];
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+年份：<input type="text" id="input1" /><br>
+月份：<input type="text" id="input2" /><br>	
+<input type="button" id="btn" value="计算" />
+
+</body>
+</html>
+<script>
+btn.onclick = function(){
+	var y = Number(input1.value);
+	var m = Number(input2.value);
+	switch( m ){
+		case 1:			
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			alert(y+"年"+m+"月有31天");
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			alert(y+"年"+m+"月有30天");
+			break;
+		case 2:
+			//闰年的条件，能被4整除且不能被100整除，或 能被100整除且能被400整除
+			var bln = (y%4==0 && y%100!=0) || (y%100==0 && y%400==0);
+			if( bln ){
+				var str = y + "年" + m + "月有29天";
+				alert(str);
+			}else{
+				alert(y+"年(平年)"+m+"月有28天");
+			}
+			break;
+		default:
+			alert("请输入有效的月份");
+	}
+}
+</script>

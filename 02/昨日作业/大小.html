@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+
+<input type="button" id="btn1" value="放大" />
+<input type="button" id="btn2" value="缩小" />
+<div id="div1">
+	文字
+</div>	
+	
+</body>
+</html>
+<script>
+var i = 16;	
+	
+btn1.onclick = function(){	
+	i++;
+	div1.style.fontSize = i+"px";
+}
+	
+btn2.onclick = function(){	
+	i--;
+	div1.style.fontSize = i+"px";
+}
+</script>

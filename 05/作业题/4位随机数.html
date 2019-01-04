@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+function fn(min, max){
+	var r = Math.random()*(max-min)  // 8999以内的数
+	return parseInt(r+min) // 大于1000的数，并且小于9999
+}
+
+for( var i=0; i<100; i++){
+	console.log( fn(1000, 9999) );
+}
+</script>	
+</body>
+</html>

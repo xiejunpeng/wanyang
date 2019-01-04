@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+//1，山上有一口缸可以装50升水，现在有15升水。老和尚叫小和尚下山挑水，每次可以挑5升。
+//问：小和尚要挑几次水才可以把水缸挑满？
+
+//	n 表示挑水的次数	i表示有多少升水
+function fn(n, i){
+	if( i>=50 ){
+		return n;
+	}else{
+		i+=5;
+		n++;
+		return fn(n, i);
+	}
+}
+// 0-15, 1-20, 2-25, 3-30, 4-35, 5-40, 6-45, 7-50
+alert( fn(0, 15) );  //fn(0, 15)第零次有15升水
+
+
+
+
+//2，编写函数sum，使其 x = y + (y-1) + (y-2) + (y-3) .... + 1;
+//y=5     x=5+4+3+2+1
+/*
+function fn(n){
+	if(n==1){
+		return 1;
+	}else{
+		return n + fn(n-1);
+	}
+}
+
+alert( fn(5) );
+*/
+/*
+ * fn(5) = 5 + fn(4)
+ * fn(4) = 4 + fn(3)
+ * fn(3) = 3 + fn(2)
+ * fn(2) = 2 + fn(1)
+ * fn(1) = 1
+ * 
+ * fn(5) = 5 + 4 + 3 + 2 + 1
+ */
+
+
+//3，初始值1万，每年涨5% ，50年后薪水多少？
+
+// function fn(y, m){
+// 	if( y==50 ){
+// 		return m;
+// 	}else{
+// 		m = m + m*0.05;
+// 		y++;
+// 		return fn(y, m);
+// 	}
+// }
+
+// alert( fn(0, 10000) );
+
+
+
+
+
+
+</script>	
+</body>
+</html>

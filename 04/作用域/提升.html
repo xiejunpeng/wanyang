@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
+<script>
+// 变量的声明提升
+/*
+var a = 5;
+function fn(){
+	console.log(a);
+	var a = 10;
+	console.log(a);
+}
+fn();
+*/
+// 上面的代码，在浏览器中真正执行时，是下面的这样的：
+// 变量声明的部分，提到作用域的顶端；赋值部分，保持不变
+/*
+var a;
+a = 5;
+function fn(){
+	var a
+	console.log(a);
+	a = 10;
+	console.log(a);
+}
+fn();
+*/
+
+
+/*
+// 函数的声明提升
+fn();
+function fn(){
+	console.log(1);
+}
+// 上文是手写的代码，下文是浏览器执行时的代码
+function fn(){
+	console.log(1);
+}
+fn();
+*/
+
+
+
+
+
+
+/*var a=1;
+function fn1(){
+	console.log(a);
+	var a=2;
+	console.log(a);
+}
+a = 3;
+fn1();
+var a = 4;
+console.log(a);
+*/
+
+
+/*function fn1(){
+	var a
+	console.log(a);	// undefined
+	a=2;
+	console.log(a);  // 2
+}
+var a
+var a
+
+a=1;
+
+a = 3;
+fn1();
+a = 4;
+console.log(a);  // 4
+*/
+
+
+
+
+
+/*var fn = function(){
+	console.log(1);
+}
+function fn(){
+	console.log(2);
+}
+fn();*/
+
+
+/*function fn(){
+	console.log(2);
+}
+var fn
+
+fn = function(){
+	console.log(1);
+}
+
+fn();*/
+
+
+
+
+/*
+var fn = function(){ console.log(1) }
+function fn(){ console.log(2) }
+fn();
+*/
+
+
+
+/*
+fn();
+var fn = function(){
+	console.log(1);
+}
+function fn(){
+	console.log(2);
+}
+*/
+
+/*
+function fn(){
+	console.log(2);
+}
+var fn
+
+fn();
+fn = function(){
+	console.log(1);
+}
+*/
+
+
+
+
+/*
+var a = 1;	
+function fn1(){
+	var a = 5;	
+	function fn2(){
+		alert( a );	
+	}
+	fn2();
+}
+fn1();
+alert( a );
+*/
+
+
+
+
+/*
+function fn1(){
+	function fn2(){
+		alert( a );	// 在当前作用域内，如果没有a的定义，会上外层作用域中查找a
+	}
+	var a
+	a = 5;	
+	
+	fn2();
+}
+var a
+
+a = 1;	
+
+fn1();
+alert( a );		// 1
+*/
+
+
+
+
+
+/*
+var a = 1;	
+function fn1(){
+	a = 5;	
+	function fn2(){
+		alert( a );	
+	}
+	fn2();
+}
+fn1();
+alert( a );
+*/
+
+
+
+
+// 作用域链
+var x=1;
+
+function a(){
+	//var x;
+	function b(){
+		// var x=3;
+		function c(){
+			
+			console.log(x);
+			//x=2;
+			//在c函数中，没有x的定义，所以去上一层作用域，即b函数中查找x的定义，
+			//如果也没有，再去上一层作用域，即a函数中查找x的定义，如果也没有定义，按照这个规律，一层一层向上查找，直到查到全局作用域为止
+		}
+		c();
+		console.log(x);
+	}
+	b();
+}
+a();
+//console.log(x);
+
+
+
+
+
+
+
+
+</script>

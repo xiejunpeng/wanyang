@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
+<script>
+//1，如果两个操作值都是数值，则直接比较大小。
+//console.log( 4<6 );
+//console.log( 4>6 );
+
+//2，如果两个操作值都是字符串，则字符串进行其Unicode编码进行比较。"3"<"12"
+
+/*
+//console.log( "3"<"4" );
+"3".charCodeAt(0) == 51
+"4".charCodeAt(0) == 52
+51<52
+// charCodeAt 作用是获取指定下标的字符的unicode值
+*/
+
+//console.log( "3"<"12" );
+// 判断3的unicode值 与 1的unicode值大小比较
+
+//console.log( "13"<"12" );
+// 先拿1和1比较，如果相同，则比较3和2
+
+//console.log( "a">"A" );
+
+
+
+//3，如果一个操作值是数值，则另一个值转换为数值进行比较。3<"12"
+
+//console.log( 3<"12" );	// 3 < Number("12")			3<12
+// console.log( 3<true );	// 3 < Number(true)			3<1
+
+
+//4，如果一个操作值是字符串，另一个操作值是布尔值，则把两个操作值都转为数值比较。true=="a"
+// console.log( true=="a" );  // Number(true)  ==  Number("a")			1 == NaN
+
+
+
+//5，NaN和任何值都不相等，包括自己，同时它与任何类型比较都会返回false。
+//console.log( NaN == NaN );
+
+
+
+// console.log( Number("") );	// 0
+//console.log( parseInt("") );// NaN
+//console.log( parseFloat("") );// NaN
+
+//console.log( Number(010) );	// 8
+//console.log( Number("010") ); // 10
+
+	
+</script>

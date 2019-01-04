@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+var arr = [5,4,3,2,1];
+var len = arr.length;
+
+
+for(var i=0; i<len; i++){
+	console.group("i:", i);
+	// 求数组中的最小值
+	// 先假设下标0是数组中最小值的下标
+	var ind = i;		// 最小值的下标
+	var min = arr[ind];	// 最小值
+	console.log( "ind:",ind, " min:", min );
+	// 循环
+	for( var j=i+1; j<len; j++ ){
+		console.group("j:", j);
+		console.log( min ,'>', arr[j] );
+		if( min>arr[j] ){ // 如果min大于arr[j]，那么表示min不是最小值
+			ind = j;		// 更新最小值
+			min = arr[j];
+		}
+		console.log( 'ind:' ,ind, ' min:', min );
+		console.groupEnd("")
+	}
+	arr[ind] = arr[i];
+	arr[i] = min;
+	console.log( arr );
+	console.groupEnd("");
+}
+
+
+
+
+
+
+
+</script>	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+.a{
+	color:red;
+	font-size: 30px;
+}	
+.b{
+	background: yellow;
+}
+</style>
+</head>
+<body>
+	<div id="div1">床前明月光</div>
+	<script>
+	//div1.class = "a";	不能用这种设置
+	
+	// div1.setAttribute("class", "a");  //往div里添加已经设置好的类名  推荐
+
+	// div1.className = "a";  //往div里添加已经设置好的类名  强烈推荐
+	
+	// div1.style.color = "red";  //在div里设置样式  不建议
+	// div1.style.fontSize = "30px"; //在div里设置样式  不建议
+	
+	// div1.style.cssText = "color:red;font-size:40px";    //在div里设置样式	强烈推荐
+	// div1.style.cssText += "background:blue";		 //在div里设置样式	强烈推荐
+	// div1.style.cssText += "color:red";			 //在div里设置样式	强烈推荐
+		
+
+	
+	// div1.classList.add("a");		//往div里添加已经设置好的类名  推荐
+	// div1.classList.add("b");		//往div里添加已经设置好的类名  推荐
+	// div1.classList.remove("a");	//往div里删除已经设置好的类名  推荐
+	
+	</script>
+</body>
+</html>

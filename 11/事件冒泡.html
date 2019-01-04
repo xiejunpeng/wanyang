@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+div{
+	padding: 30px;
+	margin: 30px;
+	color: white;
+}	
+#div1{
+	background: red;
+}
+#div2{
+	background: blue;
+}
+#div3{
+	background: green;
+}
+</style>
+</head>
+<body>
+	
+	<div id="div1">div1
+		<div id="div2">div2
+			<div id="div3">div3</div>
+		</div>			
+	</div>
+	
+	<script>
+	div1.onclick = function(){
+		alert("div1");
+	}
+	div2.onclick = function(e){
+		alert("div2");
+		e.stopPropagation();
+	}
+	div3.onclick = function(e){
+		alert("div3");
+		e.stopPropagation();  // 事件阻止传播（阻止冒泡）
+	}
+	
+	//  事件流 ：  捕获 -> 目标 ->冒泡
+	</script>
+</body>
+</html>

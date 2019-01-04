@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body style="background: rgb(255, 0, 0);">
+	
+<script>
+
+function rndColor(){
+	var r = parseInt(Math.random()*256);
+	var g = parseInt(Math.random()*256);
+	var b = parseInt(Math.random()*256);
+	return "rgb("+r+","+g+","+b+")"
+}
+
+setInterval(function(){
+	document.body.style.background = rndColor();
+}, 500)
+</script>	
+	
+</body>
+</html>

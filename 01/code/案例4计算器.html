@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<input type="text" id="input1" />	
+<select id="select1">
+	<option>+</option>
+	<option>-</option>
+	<option>*</option>
+	<option>/</option>
+	<option>%</option>
+</select>
+<input type="text" id="input2" />
+<input type="button" id="btn" value="=" />
+<div id="div1"></div>
+</body>
+</html>
+<script>
+// eval()  将字符串转为js能够解析的公式去运行
+//console.log("1+2");	// 直接输出，不会做计算
+//console.log(eval("1+2"));  // 	把字符串"1+2"，转换为js能够解析的数学上的1+2，执行
+
+btn.onclick = function(){
+	// 先把 input1的输入内容   和   select1的选择内容  和   input2的输入内容，拼接成一个字符串
+	var str = input1.value + select1.value + input2.value;
+	//console.log(eval(str));
+	// eval的作用是，把这个字符串，运算出结果 
+	// 把输入框和下拉菜单所形成的公式，和等号，和结果拼成一个字符串，显示到div中
+	div1.innerHTML = str + "=" + eval(str);
+}
+
+</script>

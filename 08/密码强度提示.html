@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+td{
+	border: 1px solid gray;
+	width: 50px;
+	height: 30px;
+}	
+</style>
+</head>
+<body>
+	
+<input type="text" id="input1" autocomplete="off" />	
+
+<table>
+	<tr>
+		<td id="td1">弱</td>
+		<td id="td2">中</td>
+		<td id="td3">强</td>
+		<td id="td4">特强</td>
+	</tr>
+</table>
+
+<script>
+/*
+ * 1:  小写英文
+ * 2:  大写英文
+ * 3:  数字
+ * 4:  其他字符
+ */
+input1.onkeyup = function(){
+	// arr[0]表示是否存在小写英文，默认值为假，表示不存在小写英文
+	// arr[1]表示是否存在大写英文，默认值为假，表示不存在大写英文
+	// arr[2]表示是否存在数字，默认值为假，表示不存在数字
+	// arr[3]表示是否存在其他字符，默认值为假，表示不存在其他字符
+	var arr = [false, false, false, false];
+	var str = input1.value;
+	var len = str.length;
+	for(var i=0; i<len; i++){
+		// 当前字符的unicode值
+		var chr = str.charCodeAt(i);
+		// 判断当前字符，是否为小写英文
+		if( chr>=97 && chr<=122 ){
+			arr[0] = true;  // 描述当前字符串中，存在小写英文
+		}else if( chr>=65 && chr<=90 ){
+			arr[1] = true;  // 描述当前字符串中，存在大写英文
+		}else if( chr>=48 && chr<=57 ){
+			arr[2] = true;  // 描述当前字符串中，存在数字
+		}else{
+			arr[3] = true;  // 描述当前字符串中，存在其他字符
+		}
+	}
+	//console.log( arr );
+	var num = 0;
+	arr.forEach(function(v){
+		if( v==true ){
+			num++;
+		}
+	})
+	//console.log(num);
+	// 让表格亮起来
+	td1.style.background = "";
+	td2.style.background = "";
+	td3.style.background = "";
+	td4.style.background = "";
+	for( var i=1; i<=4; i++ ){
+		if( i<=num ){
+			eval("td"+i).style.background = "red";
+		}
+	}
+	
+	
+}
+
+
+</script>
+	
+</body>
+</html>

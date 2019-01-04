@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<span id="span1"></span>
+<script>
+// 日期对象
+
+//var dt = new Date();  // 没有参数时，为当前时间
+
+//var dt = new Date("2018/1/1");
+
+//var dt = new Date("2018/1/1 8:1:1");
+
+// 如果传递的是数字的话，第二个参数，描述的是月份，月份以0开始，即0指1月，1指2月....
+//var dt = new Date(2018, 1, 1);
+//var dt = new Date(2018, 12, 1); // 2019-1-1
+
+//var dt = new Date(2018, 1, 1, 8, 10, 20);
+
+
+
+//getFullYear()		从 Date 对象以四位数字返回年份。
+//var dt = new Date();
+//console.log(dt.getFullYear());	// 返回当前年份
+
+
+
+//setFullYear()		设置 Date 对象中的年份（四位数字）。
+// var dt = new Date();
+// dt.setFullYear(1997);
+// console.log( dt.toLocaleString() );
+
+
+//getMonth()		从 Date 对象返回月份 (0 ~ 11)。
+//console.log(new Date().getMonth())
+
+
+//setMonth()		设置 Date 对象中月份 (0 ~ 11)。
+//var dt = new Date();
+//dt.setMonth(12);
+//console.log( dt.toLocaleString() );
+
+
+
+
+//getDate()			从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+//setDate()			设置 Date 对象中月的某一天 (1 ~ 31)。
+//getHours()			返回 Date 对象的小时 (0 ~ 23)。
+//setHours()			设置 Date 对象中的小时 (0 ~ 23)。
+//getMinutes()		返回 Date 对象的分钟 (0 ~ 59)。
+//setMinutes()		设置 Date 对象中的分钟 (0 ~ 59)。
+//getSeconds()		返回 Date 对象的秒数 (0 ~ 59)。
+//setSeconds()		设置 Date 对象中的秒钟 (0 ~ 59)。
+//getMilliseconds()		返回 Date 对象的毫秒(0 ~ 999)。
+//var dt = new Date();
+//console.log(dt.getMilliseconds()	);
+// 1000ms等于1s
+
+//setMilliseconds()		设置 Date 对象中的毫秒 (0 ~ 999)。
+
+
+
+
+
+
+//getTime()			返回 1970 年 1 月 1 日至今的毫秒数。
+//var dt = new Date("1970-1-1 8:1:1");
+//var ms = dt.getTime()  // dt这个时间 与 1970-1-1 8:0:0 的间隔（单位是毫秒）
+//console.log(ms);
+
+
+//setTime()			以毫秒设置 Date 对象。
+//var dt = new Date();
+//dt.setTime(1000);
+//console.log(dt.toLocaleString());
+
+
+
+
+//Date.parse("1970/1/1 8:0:0")	返回1970年1月1日到指定日期（字符串）的毫秒数。
+
+//console.log(Date.parse("1970/1/1 8:0:1"));
+
+
+
+
+//getDay()			从 Date 对象返回一周中的某一天 (0 ~ 6) 0指周日，1指星期一，2指星期二。
+//var dt = new Date();
+//console.log(dt.getDay());
+
+
+//console.log("星期"+"日一二三四五六"[new Date().getDay()]);
+
+/*
+setInterval(function(){
+	span1.innerHTML = new Date().toLocaleString();
+}, 1000);
+*/
+
+
+
+
+
+//toUTCString()		根据世界时，把 Date 对象转换为字符串。
+
+//console.log(dt.toLocaleString());
+
+
+
+
+</script>	
+</body>
+</html>

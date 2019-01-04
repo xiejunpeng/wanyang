@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	
+<script>
+/*
+递归求斐波那契数列（fib）
+
+该数列指 1，1，2，3，5，8，13，21，34，55，89，144，233，377...
+
+这个数列从第3项开始，每一项都等于前两项之和。
+
+第0项为0，第1项为第一个1。
+
+*/
+
+// 循环版：
+/*
+function fib(n){	 // n描述的是第几项			// n=4
+	var a = 1;	// 当前项的前两项
+	var b = 1;	// 当前项的前一项
+	var c; 		// 前两项的和	
+	
+	if( n<=2 ){					// 4<=2
+		return 1;
+	}else{
+		// i=3;  5<=4; 
+		for( var i=3; i<=n; i++ ){
+			// c = 1+2
+			c = a+b;		// c表示前两项的和
+			// c = 3
+			a = b;	// a=2
+			b = c;	// b=3
+		}
+		return c;
+	}
+}
+
+console.log(fib(5));		// 5
+*/
+
+
+
+
+
+// 递归版
+
+function fib(n){
+	if( n<=2 ){
+		return 1;
+	}else{
+		return fib(n-1) + fib(n-2);
+	}
+}
+
+/*
+ * fib(5)    =     fib(4) + fib(3)
+ * fib(4)    = 	   fib(3) + fib(2)
+ * fib(3)    =     fib(2) + fib(1)
+ * fib(2)    =     1
+ * fib(1)    =     1
+ * 
+ * 
+ * fib(5)    =     1 + 1 + 1 + 1 + 1
+ */
+
+console.log(fib(5));		// 5
+
+
+</script>	
+	
+</body>
+</html>

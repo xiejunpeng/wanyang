@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<input type="text" id="input1" />
+</body>
+</html>
+<script>
+// 获得焦点	
+input1.onfocus = function(){
+	this.style.background = "green";
+}
+
+// 失去焦点
+input1.onblur = function(){
+	this.style.background = "";
+}
+</script>

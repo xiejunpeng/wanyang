@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body id="body1">
+<input type="button" id="btn1" value="red" />
+<input type="button" id="btn2" value="green" />
+<input type="button" id="btn3" value="blue" />
+
+<script>
+
+
+
+
+
+
+
+/*	
+btn.onclick = function(){
+	console.log( this );		// 指向按钮
+	console.log( this == btn );
+}
+*/
+/*
+function fn(){
+	console.log(this)
+	body1.style.background = this.value;
+}
+
+btn1.onclick = fn;
+btn2.onclick = fn;
+*/
+
+
+
+/*
+function fn(){
+	console.log(this);
+}
+*/
+
+//fn();	// Window窗口，指浏览器，window是最顶层对象
+//window.fn();
+
+//window.alert();
+//var a = 1;
+//console.log( window.a );
+
+
+
+
+
+
+/*	
+function fn(){
+	alert()
+}
+//btn1.onclick = fn(); // 先执行等号后面的函数，函数运行后的返回值是undefined，所以按钮点击时没有任何效果
+//等同于   btn1.onclick = undefined;
+*/
+
+
+
+/*
+function fn(){
+	return function(){
+		alert();
+	}
+}
+//btn1.onclick = fn(); 函数先执行，然后把返回值赋给按钮的点击事件上
+ 等同于   btn1.onclick = function(){
+	alert();
+}*/
+
+
+// 以后会具体讲的闭包函数，今天先了解了解即可
+/*
+function fn(a){
+	return function(b){
+		alert(a+b)
+	}
+}
+fn(1)(2)
+*/
+
+
+// 有一个sum函数的作用是实现加法运算，只考虑3个参数
+//sum(1,2,3)  == 6
+//sum(1)(2)(3)  == 6
+
+
+
+
+
+
+
+
+</script>
+	
+</body>
+</html>

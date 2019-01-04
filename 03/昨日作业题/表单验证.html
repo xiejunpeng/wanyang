@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+名称：<input type="text" id="inpUser" /><span id="spaUser"></span><br>
+电话：<input type="text" id="inpPhone" /><span id="spaPhone"></span><br>
+</body>
+</html>
+<script>
+// 当键盘上的键子按下后，抬起时	
+inpUser.onkeyup = function(){
+	var strUser = inpUser.value;
+	if( strUser == "" ){
+		spaUser.innerHTML = "<img src='0.jpeg' style='width:20px'>非法提示：请输入用户名称!";
+		spaUser.style.color = "red";
+	}else{
+		spaUser.innerHTML = "合法";
+		spaUser.style.color = "green";
+	}
+}
+
+
+
+inpPhone.onkeyup = function(){
+	var strPhone = inpPhone.value;
+	if( strPhone.length == 11 ){
+		if( strPhone == parseInt(strPhone) ){
+			spaPhone.innerHTML = "合法";
+		}else{
+			spaPhone.innerHTML = "电话必须为数字";
+		}
+	}else{
+		spaPhone.innerHTML = "电话必须为11位，当前为："+strPhone.length;
+	}
+}
+</script>

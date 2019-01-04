@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+年：<input type="text" id="input1" /><br>
+月：<input type="text" id="input2" /><br>
+日：<input type="text" id="input3" /><br>
+<input type="button" id="btn" value="按钮" />	
+	
+<script>
+//dayOfYear
+
+btn.onclick = function(){
+	var str = input1.value+"/"+input2.value+"/"+input3.value;
+	//把字符串转为日期对象
+	var dt1 = new Date(str);  // 当前时间
+	var dt2 = new Date(Number(input1.value), 0, 0);	// 当年第一天
+	// 两个日期的毫秒间隔
+	var dist = dt1.getTime() - dt2.getTime();
+	console.log( dist/1000/60/60/24 );
+}
+
+
+
+
+
+
+</script>	
+</body>
+</html>

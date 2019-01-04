@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body id="body1">
+
+<select id="select1">
+	<option value="red">a</option>	
+	<option value="green">b</option>	
+	<option value="blue">c</option>	
+</select>
+
+</body>
+</html>
+<script>
+// 下拉菜单的值被改变时，除法函数	
+select1.onchange = function(){
+	body1.style.background = select1.value;
+}
+</script>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>
+<script>
+// 浏览器窗口大小发生变化时	
+window.onresize = function(){
+	// 文档可视区域的宽度
+	var cw = document.documentElement.clientWidth;
+	var ch = document.documentElement.clientHeight;
+	
+	div1.innerHTML = cw+" , "+ch;
+}
+</script>

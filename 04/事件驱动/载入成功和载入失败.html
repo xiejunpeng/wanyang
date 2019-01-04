@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<img src="android小人.PNG" id="img1" />
+</body>
+</html>
+<script>
+// 载入成功时	
+img1.onload = function(){
+	document.title = "载入成功";
+}
+// 载入失败
+img1.onerror = function(){
+	document.title = "载入失败";
+}
+</script>

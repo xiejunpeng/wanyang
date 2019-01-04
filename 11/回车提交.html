@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+#input1{width: 300px;}
+#textarea1{width: 300px; height: 150px;}	
+</style>
+</head>
+<body>
+
+<form id="form1" method="get" action="http://www.baidu.com">
+	<input type="text" id="input1" /><br>
+	<textarea id="textarea1"></textarea><br>
+	<input type="submit" />
+</form>
+
+<script>
+form1.onkeyup = function(e){
+	document.title = e.keyCode
+	if( e.ctrlKey && e.keyCode==13 ){ // ctrl+回车时提交表单
+		form1.submit(); // 提交表单
+	}
+}
+</script>
+	
+</body>
+</html>

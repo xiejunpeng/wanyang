@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+
+// 值传递
+
+// var a = 1;
+// var b = a;	// b=1	
+// a = 2;	// a=2的更改，没有影响到变量b，因为上一行代码中，b=a时，走的是值传递，
+//相当于 直接把a所表示的1，赋值给变量b
+// console.log(b);	// 1
+// console.log(a);	
+
+
+
+// 引用传递
+// var a = [1, 2];
+// var b = a;	// b = [1,2] // 将a的地址，赋值给b
+// a[0] = "x";	// 
+// console.log(b[0]);	
+
+
+
+
+
+// function fn(a){ // var a = 5  // 函数内的参数，属于函数中的局部变量
+// 	a = 10;
+// }
+
+// var a = 5;
+// fn(a);
+// console.log(a);
+
+
+
+// var arr = [1, 2];
+// function fn(arr){	// var arr=全局变量arr指向堆中数据的地址
+// 	arr[0] = 'x';
+// }
+// fn(arr);
+// console.log(arr[0]);
+
+
+
+
+
+// 深拷贝 和 潜拷贝
+
+var arr = [
+	'a', 'b', [1, 2]
+];
+// var col = arr;	// 这叫做赋值，并不叫做拷贝
+
+// // 潜拷贝：只拷贝了第一层数组中的信息
+// var col = arr.slice(0);
+
+// arr[0] = "x";
+// console.log( col[0] );
+
+
+
+// 深拷贝：每一层都拷贝出来
+// JSON.stringify 将数组转换为字符串
+var str = JSON.stringify(arr);
+// JSON.parse 将字符串转为数组
+var col = JSON.parse(str);
+
+// console.log(col);
+
+arr[2][0] = 'x';
+console.log( col[2][0] );
+
+
+
+
+
+
+
+
+
+
+
+</script>	
+</body>
+</html>

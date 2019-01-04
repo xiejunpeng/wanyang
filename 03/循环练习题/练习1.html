@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//     打印出1000-2000年中所有的闰年，并以每行四个数的形式输出;
+// //闰年：能被4整除且不能被100整除，或 能被100整除且能被400整除
+
+    // var i=0;
+    // for( var y=1000;y<=2000;y++){
+    //     var bln=(y%4==0 && y%100!=0)||(y%100==0 && y%400==0);
+    //     if(bln){
+    //         i++
+    //         document.write(y+"年&nbsp;&nbsp;");
+    //         if(i%4==0){
+    //             document.write("<br>");
+    //         }
+    //     }
+    // }
+
+
+    // 打印出1900年到现在所有的闰年，并以每行四个数的形式输出
+    var i=0;
+    for( var y=1900;y<=2018;y++){
+        var bln=(y%4==0 && y%100!=0)||(y%100==0 && y%400==0);
+        if(bln){
+            i++
+            document.write(y+"年&nbsp;&nbsp;");
+            if(i%4==0){
+                document.write("<br>");
+            }
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+// 无论是setTimeout 还是 setInterval 都是异步任务
+
+// 异步：并行执行，前一个任务没有执行完的时候，下一个任务就可以开始去执行了。
+// 同步：任务依次执行，即前一个任务执行结束后，下一个任务才开始去执行。
+
+console.log(1);
+setTimeout(function(){
+	console.log(2);
+}, 0);  // setTimeout的毫秒，最小值为4
+console.log(3);
+
+
+
+
+
+</script>	
+</body>
+</html>

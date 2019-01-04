@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<div id="div1" class="c"></div>	
+<div id="div2" name="d" class="c"></div>
+<div id="div3"></div>
+<div id="div4" name="d"></div>
+
+<script>
+//document.getElementById("div1").innerHTML ="hello";   标准写法
+//div1.innerHTML="不太得";      简写
+
+
+
+// var divs = document.getElementsByTagName("div");
+// console.log(divs);
+//divs[0].innerHTML = "hello";
+//console.log( divs[0]===div1 );
+
+
+var ds = document.getElementsByName("d")
+console.log(ds);
+//console.log(ds[0] === div2);
+//ds[0].innerHTML = "hello"
+
+
+
+//var c = document.getElementsByClassName("c")
+//console.log(c);
+//console.log(c[0] === div1);
+//c[0].innerHTML = "hello"
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

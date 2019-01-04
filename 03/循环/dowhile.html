@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
+<script>
+// while 先判断条件是否成立，条件成立时，执行里面的代码；条件不成立时，跳出循环。	
+//while(false){
+//	console.log(1);
+//}
+	
+/*	
+ * do while 先执行大括号里面的代码，然后判断条件是否成立，如果条件成立，则循环，否则跳出循环。
+do{
+	console.log(1);
+}while(false)
+*/
+
+
+//篮球由5米高度落下，每次弹起的高度是原来的30%，
+//经过几次弹起，篮球的高度约等于0.1米；
+
+
+/*var n = 0;	// 弹起的次数
+var i = 5;	// 高度
+do{
+	i = i * 0.3;		// 每一次弹起的新的高度
+	n++;
+	document.write( n+"次"+i+"米<br>" );
+}while( i.toFixed(1) != 0.1 )
+
+document.write(n)
+*/
+
+
+/*var n = 0;	// 弹起的次数
+var i = 5;	// 高度
+do{
+	i = i * 0.3;		// 每一次弹起的新的高度
+	n++;
+	document.write( n+"次"+i+"米<br>" ); 
+	if( i.toFixed(1) == 0.1 ){
+		break;
+	}
+}while( true )
+document.write( n );
+
+*/
+
+/*
+var n = 0;	// 弹起的次数
+var i = 5;	// 高度
+while( true ){
+	i = i * 0.3;		// 每一次弹起的新的高度
+	n++;
+	document.write( n+"次"+i+"米<br>" );
+	if( i.toFixed(1) == 0.1 ){
+		break;
+	}
+}
+document.write( n );
+*/
+
+</script>

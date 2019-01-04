@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
+<script>
+
+// 全局变量
+var a = 5;
+
+function fn(){ // 虽然函数内，没有a的定义，但是在函数外，有a的定义，所以能够找到a    php的不能找到要加global
+	console.log(a);
+}
+
+fn();
+
+
+
+
+/*
+function fn(){	// 函数作用域
+	var a = 10;	// 局部变量，仅在自身的作用域内有效
+	console.log(a);
+}
+
+fn();	// 函数执行时，变量a被创建了，函数执行完毕后，变量a被销毁了
+
+console.log(a);	//  a is not defined
+*/
+
+
+
+// 建议声明变量时，都写var
+
+//b = 5;	// 如果没有使用var声明变量，那么为全局变量
+//console.log(b);
+/*
+function fn(){
+	b = 10;
+}
+fn();
+console.log(b);
+*/
+
+
+
+
+
+
+
+</script>

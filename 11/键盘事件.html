@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+#div1{
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	background: red;
+}	
+</style>
+</head>
+<body>
+	<div id="div1"></div>
+	
+<script>
+document.onkeyup = function(e){
+	var code = e.keyCode;  //press时方向键无法识别
+	document.title = code;
+	switch(code){
+		case 37:  // 左
+			div1.style.left = div1.offsetLeft-10+"px";
+			break;
+		case 38: // 上
+			div1.style.top = div1.offsetTop-10+"px";
+			break;
+		case 39: // 右
+			div1.style.left = div1.offsetLeft+10+"px";
+			break;
+		case 40: // 下
+			div1.style.top = div1.offsetTop+10+"px";
+			break;
+	}
+	if(e.ctrlKey && code==49){
+		div1.style.background = "blue";
+	}
+	if(e.shiftKey && code==49){
+		div1.style.background = "green";
+	}
+	if(e.altKey && code==49){
+		div1.style.background = "orange";
+	}
+	if(e.ctrlKey && e.shiftKey && e.altKey && code==50){
+		div1.style.width = "200px";
+		div1.style.height = "200px";
+	}
+	
+}
+
+
+
+
+
+	
+/*	
+document.onkeydown = function(e){ // keydown时，keycode把所有的小写都转为大写了
+	// 按下的键子，所对应的unicode值
+	var code = e.keyCode;
+	console.log(code, String.fromCharCode(code));
+}
+*/
+/*
+document.onkeypress = function(e){ // 区分大小写
+	// 按下的键子，所对应的unicode值
+	var code = e.keyCode;
+	console.log(code, String.fromCharCode(code));
+}
+*/
+
+
+</script>	
+	
+</body>
+</html>

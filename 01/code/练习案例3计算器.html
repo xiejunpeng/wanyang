@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="input1">
+        <input type="text" id="input2">
+        <input type="button" id="btn1" value="加">
+        <input type="button" id="btn2" value="减">
+        <input type="button" id="btn3" value="乘">
+        <input type="button" id="btn4" value="除">
+        =
+        <input type="text" id="input3">
+    </form>
+</body>
+    <script>
+        // btn1.onclick=function(){
+        //     input3.value=Number(input1.value) + Number(input2.value); //Number数字首字母要用大写
+        // }
+        // btn2.onclick=function(){
+        //     input3.value=Number(input1.value) - Number(input2.value); //Number数字首字母要用大写
+        // }
+        // btn3.onclick=function(){
+        //     input3.value=Number(input1.value) * Number(input2.value); //Number数字首字母要用大写
+        // }
+        // btn4.onclick=function(){
+        //     input3.value=Number(input1.value) / Number(input2.value); //Number数字首字母要用大写
+        // }
+        var input1=document.getElementById("input1");
+        var input2=document.getElementById("input2");
+        var input3=document.getElementById("input3");
+        var input4=document.getElementById("input4");
+        btn1.onclick=function(){
+            input3.value=parseInt(input1.value) + parseInt(input2.value);
+        }    
+        // btn2.onclick=function(){
+        //     input3.value=Number(input1.value) - Number(input2.value);
+        // }
+        // btn3.onclick=function(){
+        //     input3.value=Number(input1.value) * Number(input2.value);
+        // }
+        // btn4.onclick=function(){
+        //     input3.value=Number(input1.value) / Number(input2.value);
+        // }
+
+
+
+    </script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+#div1{
+	width: 150px;
+	height: 150px;
+	border:1px solid gray;
+}	
+</style>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>
+<script>
+// 鼠标进入时
+div1.onmouseover = function(){
+	div1.style.background = "skyblue";
+}
+
+// 鼠标离开时
+div1.onmouseout = function(){
+	div1.style.background = "yellow";
+}
+
+// 鼠标抬起时
+div1.onmouseup = function(){
+	div1.style.background = "greenyellow";
+}
+
+// 鼠标按下时
+div1.onmousedown = function(){
+	div1.style.background = "yellowgreen";
+}
+
+// 鼠标移动时
+var i = 0;
+div1.onmousemove = function(){
+	i++;
+	div1.innerHTML = i;
+}
+</script>

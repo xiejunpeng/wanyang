@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<input type="text" id="input1" />
+	<input type="text" id="input2" />
+	<input type="text" id="input3" />
+	<input type="button" id="btn" value="排序" />
+	<div id="div1"></div>
+	<script>
+	
+	function sort(a, b, c){  // a=13,b=6,c=4
+		//
+		var temp;
+		if( a>b ){	//13>6
+			temp = a;	// temp=13
+			a = b;		// a = 6
+			b = temp;	// b = 13
+		}	// 上面的if语句执行后，a一定是小于b的
+		
+		if( a>c ){	// 6>4
+			temp = a;	// temp = 6
+			a = c;		// a = 4
+			c = temp;	// c = 6
+		}	// 这个if语句执行后，a一定小于c
+		
+		if( b>c ){	// 13>6
+			temp = b;	// temp=13
+			b = c;		// b = 6
+			c = temp;	// c = 13
+		}	// 这个if语句执行后，b一定小于c
+		
+		return a+"<"+b+"<"+c;
+	}
+	
+	//alert(sort(13, 6, 4));
+	
+	btn.onclick = function(){
+		div1.innerHTML = sort(Number(input1.value), Number(input2.value), Number(input3.value))
+	}
+	
+	</script>
+</body>
+</html>

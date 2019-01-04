@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<!--	
+	为抵抗洪水，战士连续作战89小时，编程计算共多少天零多少小时？
+	思路：1天是24小时，89小时除以24小时的结果的整数部分就是天数
+	（parseInt可以对一个数取整数部分），余数就是剩余多少个小时，
+	把整天数和余出来的小时数，用加号拼接在一起，用alert输出就可以了。
+-->
+
+<input type="text" id="input1" />
+<input type="button" id="btn" value="按钮" />
+<div id="div1"></div>
+
+</body>
+</html>
+<script>
+btn.onclick = function(){
+	var num = input1.value;
+	var d = parseInt(num/24);
+	var h = num%24;
+	div1.innerHTML = d+"天"+h+"时";
+}
+
+
+</script>

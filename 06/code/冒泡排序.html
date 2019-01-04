@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+
+// 冒泡排序
+
+var arr = [23, 16, 8, 5, 2, 1];
+var len = arr.length;
+
+for(var i=0; i<len-1; i++){
+	console.group("i:", i);
+	// len-1 是因为最后一次操作时，下标[j+1]时会越界
+	// 上一次循环后，最大值已经确认了，所以这一次的循环，没有必要和最大值比较了，所以减掉i
+	for( var j=0; j<len-1-i; j++ ){
+		console.group("j:", j);
+		console.log(arr[j] ,'>', arr[j+1])
+		if ( arr[j] > arr[j+1] ){  // 交换，小的放前面，大的放后面
+			var tmp = arr[j];
+			arr[j] = arr[j+1];
+			arr[j+1] = tmp;
+		}	
+		console.log(arr)
+		console.groupEnd("------------");
+	}
+	console.log(arr)
+	console.groupEnd("------------");
+}
+
+
+
+
+
+</script>	
+</body>
+</html>

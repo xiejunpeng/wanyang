@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+
+//var arr = ["a", "b", "c"];
+
+// 末尾处追加
+//var len = arr.push("d", "e");
+
+// 末尾处删除
+//var item = arr.pop();
+
+// 开头处添加
+//var len = arr.unshift("x", "y")
+
+// 开头处删除
+//var item = arr.shift();
+
+//console.log(arr);
+//console.log(len);
+//console.log(item);
+
+
+
+// 连接
+// var arr1 = ["a", "b"];
+// var arr2 = ["c", "d"];
+// var arr3 = ["e", "f"];
+// var arr = arr1.concat(arr2, arr3);
+// console.log( arr );
+// console.log( arr1 );
+// console.log( arr2 );
+// console.log( arr3 );
+
+
+// 把数组转换为字符串，用join参数字符串，把数组中的所有元素，连接到一起
+// var arr = ["hello", "world", "aaa"];
+// var str = arr.join("1234");
+// console.log(str);
+
+
+
+// 颠倒
+// var arr = ["a", "b", "c", "d"];
+// arr.reverse();
+// console.log( arr );
+
+
+
+
+// 截取
+// var arr = ["a", "b", "c", "d"];
+//var r = arr.slice(1);  // r=["b", "c", "d"]， 从下标1开始截取，截取到最后
+// var r = arr.slice(1, 2); // 从下标1开始，到下标2之前结束
+//var r = arr.slice(-1);	// 截取倒数第一个
+// console.log(r);
+// console.log(arr);	// slice 没有对元素数组造成影响
+
+
+
+// 添加及删除
+var arr = ["a", "b", "c", "d","a", "b",];
+// var r = arr.splice(1, 2)	// 从下标1开始，删除2个成员，删掉的成员被变量r接收
+var r = arr.splice(1, 0, "x")
+// console.log(r);
+console.log(arr);
+
+
+
+// var arr = ["a", "b", "c", "d"];
+// console.log(arr.toString())  // "a,b,c,d"
+
+
+
+</script>	
+</body>
+</html>

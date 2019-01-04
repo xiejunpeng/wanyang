@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<ul id="ul1">
+		<li style="background: red;">0</li>
+		<li style="background: green;">1</li>
+		<li style="background: blue;">2</li>
+		<li style="background: orange;">3</li>
+	</ul>
+	<br><br>
+	删除哪个下标对应的元素：<br>
+	<input type="text" id="input1" value="0" />
+	<input type="button" id="btn" value="删除" />
+	<input type="button" id="btn2" value="删除全部的li" />
+	<script>
+	btn2.onclick = function(){
+		var lis = document.getElementsByTagName("li");
+		var len = lis.length
+		for( var i=0; i<len; i++ ){
+			ul1.removeChild(lis[0]);
+		}
+	}
+		
+		
+		
+	btn.onclick = function(){
+		var ind = Number(input1.value);
+		var lis = document.getElementsByTagName("li");
+		ul1.removeChild(lis[ind]);
+	}
+	
+	</script>
+	
+	
+	
+</body>
+</html>

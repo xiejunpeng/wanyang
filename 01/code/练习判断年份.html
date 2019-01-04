@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="input1">
+        <input type="button" id="btn" value="闰年判断">
+    </form>
+    <div id="div1"></div>
+</body>
+    <script>
+        btn.onclick=function(){
+            var _input1=input1.value;
+            // if(( _input1%4===0 &&  _input1%100!=0) ||  _input1%400===0){
+            //     // div1.innerHTML= _input1+"是闰年";
+            //     div1.innerHTML="是闰年";
+            // }
+            // else{
+            //     // div1.innerHTML= _input1+"是平年";
+            //     div1.innerHTML="是平年";
+            // }
+
+            //闰年的条件，能被4整除且不能被100整除，或 能被100整除且能被400整除
+
+            _input1=(_input1%4===0 &&  _input1%100!=0) ||  _input1%400===0 ? "该年是闰年":"该年的平年"; 
+            div1.innerHTML=_input1;
+        }
+    </script>
+</html>

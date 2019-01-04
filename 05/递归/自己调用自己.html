@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<script>
+// 自己直接调用自己，死循环	
+/*
+function fn(){
+	fn();
+}
+
+fn();
+*/
+
+// 自己间接调用自己，死循环
+function a(){
+	b();
+}
+
+function b(){
+	a();
+}
+
+a();
+
+
+</script>	
+</body>
+</html>

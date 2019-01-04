@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+table{
+}	
+td{
+	border: 0px solid gray;
+	width: 5px;
+	height: 5px;
+}	
+#div1{
+	border: 1px solid gray;
+	width: 1181px;
+	height: 1996px;
+	background: url(1.jpg);	
+}
+</style>
+</head>
+<body>
+行：<input type="text" id="input1" value="170" /><br>
+列：<input type="text" id="input2" value="170" /><br>
+<input type="button" id="btn" value="创建表格" />
+<div id="div1"></div>
+<script>
+function rndColor(){
+	var r = parseInt(Math.random()*256);
+	var g = parseInt(Math.random()*256);
+	var b = parseInt(Math.random()*256);
+	return "rgb("+r+","+g+","+b+")"
+}
+
+function fn(){
+	var rows = Number(input1.value);
+	var cols = Number(input2.value);
+	// 创建虚拟节点
+	var tmp = document.createDocumentFragment();
+	var table = document.createElement("table");
+	tmp.appendChild(table);
+	table.cellPadding = 0;
+	table.cellSpacing = 0;
+	// 创建行
+	for( var i=0; i<rows; i++ ){
+		var tr = document.createElement("tr");
+		table.appendChild(tr);
+		// 创建列
+		for( var j=0; j<cols; j++ ){
+			var td = document.createElement("td");
+			tr.appendChild(td);
+			td.style.background = "gray";//rndColor();
+			td.onmouseover = function(){
+				this.style.background = "";
+			}
+		}
+	}
+	// 真实DOM更新
+	div1.appendChild(tmp);
+}
+
+btn.onclick = fn;
+
+fn();
+</script>	
+</body>
+</html>

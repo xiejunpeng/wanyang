@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<form id="form1" action="http://www.baidu.com">
+		<input type="text" value="默认值" /><br>
+		<input type="submit" value="提交" />
+		<input type="reset" value="重置" />
+		<input type="button" value="按钮" />
+	</form>
+	<script>
+		// 当表单被提交时，执行的函数
+		form1.onsubmit = function(){
+			alert("表单被提交了");
+			return false;	// 阻止了表单的提交
+		}
+		
+		// 当表单被重置时，执行的函数
+		form1.onreset = function(){
+			alert("表单被重置了");
+			return false;	// 阻止了表单的重置
+		}
+		
+		
+	</script>
+</body>
+</html>

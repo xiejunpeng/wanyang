@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+#div1{
+	position: fixed;
+	background: rgba(255,255,0,.3);
+	border: 1px solid gray;
+	padding: 5px;
+	font-size: 12px;
+	display: none;
+}	
+</style>
+</head>
+<body>
+	<!--<span title="静夜思">床前明月光</span>-->
+	
+	
+	<span id="span1">床前明月光</span>
+	<div id="div1">静夜思</div>
+	
+	<script>
+	span1.onmouseover = function(){
+		div1.style.display = "block";	
+		console.log('over');
+	}
+	
+	span1.onmouseout = function(){
+		div1.style.display = "none";	
+		console.log('out');
+	}
+	
+	span1.onmousemove = function(e){
+		div1.style.left = e.clientX+10+"px";
+		div1.style.top = e.clientY+10+"px";
+	}
+	</script>
+	
+	
+	
+</body>
+</html>
